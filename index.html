@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wesnoth x DnD Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Alegreya:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f4ead9;
+      --ink: #2f2014;
+      --card: #fff8ea;
+      --line: #a68253;
+      --accent: #8d2e1e;
+      --accent-2: #355f3a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Alegreya", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 420px at 15% -5%, #fef6e7 0%, transparent 65%),
+        radial-gradient(900px 320px at 85% -10%, #e7d7b9 0%, transparent 70%),
+        linear-gradient(180deg, #f3e6ce 0%, var(--bg) 48%, #eadabf 100%);
+      min-height: 100vh;
+    }
+    .frame {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 1rem 2.5rem;
+    }
+    h1 {
+      font-family: "Cinzel", serif;
+      margin: 0;
+      letter-spacing: 0.03em;
+      font-size: clamp(1.7rem, 4.8vw, 2.8rem);
+    }
+    .subtitle {
+      margin: 0.7rem 0 0;
+      font-size: 1.05rem;
+      max-width: 72ch;
+    }
+    .grid {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1rem;
+      box-shadow: 0 8px 20px rgba(40, 25, 12, 0.1);
+      display: grid;
+      gap: 0.7rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border: 1px solid #b29366;
+      border-radius: 999px;
+      padding: 0.18rem 0.6rem;
+      background: #fff2d9;
+      width: fit-content;
+    }
+    h2 {
+      margin: 0;
+      font-family: "Cinzel", serif;
+      font-size: 1.2rem;
+    }
+    p { margin: 0; line-height: 1.45; }
+    .cta {
+      margin-top: 0.2rem;
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 9px;
+      border: 1px solid var(--line);
+      padding: 0.48rem 0.75rem;
+      color: #fff;
+      background: linear-gradient(180deg, #9e3e2d 0%, var(--accent) 100%);
+      font-weight: 700;
+    }
+    .cta.alt {
+      background: linear-gradient(180deg, #4a7a50 0%, var(--accent-2) 100%);
+    }
+    .footer {
+      margin-top: 1.6rem;
+      font-size: 0.92rem;
+      color: #593d22;
+      border-top: 1px dashed #b39263;
+      padding-top: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="frame">
+    <h1>Wesnoth x DnD Control Center</h1>
+    <p class="subtitle">
+      One place to manage your converted unit bestiary, create new homebrew statblocks in the same style,
+      and launch your DnD tools.
+    </p>
+
+    <section class="grid" aria-label="Main site pages">
+      <article class="card">
+        <span class="tag">Database</span>
+        <h2>Wesnoth Unit Database</h2>
+        <p>Browse converted units by species, level, and CR. Includes your Homebrew category entries saved from the generator page.</p>
+        <a class="cta" href="output/dnd_units_database.html">Open Database</a>
+      </article>
+
+      <article class="card">
+        <span class="tag">Create</span>
+        <h2>Homebrew Monster Generator</h2>
+        <p>Build monsters with checkbox-selected proficiencies, senses, languages, features, and attacks. Import a Wesnoth unit file to seed a base creature.</p>
+        <a class="cta alt" href="homebrew-monster-generator.html">Open Generator</a>
+      </article>
+
+      
+    </section>
+
+    <p class="footer">
+      Tip: create or edit a homebrew unit first, then open the database page to see it listed under Homebrew.
+    </p>
+  </main>
+</body>
+</html>
